@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mazeSize: 11
-  numPeople: 2
+  numPeople: 10
   numObjects: 10
   lightingLevel: 1
   autoIdentifyHumans: 1
@@ -169,7 +169,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &865382469
 GameObject:
@@ -422,7 +422,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -466,7 +466,8 @@ MonoBehaviour:
   pointLight: {fileID: 8676112313496238403, guid: 1e95c340c73df0445b4c45cbe2aded66, type: 3}
   pointCount: 4
   randomPoints: []
-  rescue: {fileID: 3260176484916866183, guid: ca460cc04c98ac84598f19f80a73ffd9, type: 3}
+  victimModel: {fileID: 7025514175951992108, guid: 635ff18a39b39164684de4b50f8addb5, type: 3}
+  victimYPos: -3.5
   numObjects: 10
   lightingLevel: 1
   tb3: {fileID: 1872241788542568028, guid: 34effcfe811ae3149930f116567a9d19, type: 3}

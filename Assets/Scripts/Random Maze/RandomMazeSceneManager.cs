@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class RandomMazeSceneManager : MonoBehaviour
 {
+    public static bool isPaused = false;
     public int mazeSize = 11;
     public int numPeople = 2;
     public int numObjects = 10;
@@ -28,6 +29,14 @@ public class RandomMazeSceneManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Q)){
             ResetScene();
         }
+        if(Input.GetKeyDown(KeyCode.P)){
+            PausePhysics();
+        }
+    }
+
+    void PausePhysics(){
+        isPaused = !isPaused;
+        Time.timeScale = isPaused ? 0 : 1;
     }
 
     void LoadVariablesFromPlayerPrefs(){

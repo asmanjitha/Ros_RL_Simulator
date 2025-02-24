@@ -12,7 +12,8 @@ public class MazeGenerator : MonoBehaviour
     public GameObject pointLight;
     public int pointCount = 1; // Number of random points
     public List<Vector3> randomPoints = new List<Vector3>(); // Stores random walkable points
-    public GameObject rescue;
+    public GameObject victimModel;
+    public float victimYPos = -3.432f;
 
     public int numObjects = 10;
     public int lightingLevel = 1;
@@ -136,9 +137,9 @@ public class MazeGenerator : MonoBehaviour
             Vector2Int chosenPoint = walkableSpaces[index];
             walkableSpaces.RemoveAt(index);
 
-            Vector3 worldPosition = new Vector3(chosenPoint.x * cubeSize.x, -0.85f, chosenPoint.y * cubeSize.z);
+            Vector3 worldPosition = new Vector3(chosenPoint.x * cubeSize.x, victimYPos, chosenPoint.y * cubeSize.z);
             randomPoints.Add(worldPosition);
-            Instantiate(rescue, worldPosition, Quaternion.identity);
+            Instantiate(victimModel, worldPosition, Quaternion.identity);
         }
 
         // --------------------Initiate Avatar and TB3-----------------------
